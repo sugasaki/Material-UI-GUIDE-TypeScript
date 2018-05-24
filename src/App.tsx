@@ -1,23 +1,15 @@
-import Button from '@material-ui/core/Button';
 import * as React from 'react';
 import './App.css';
-import DecoratedSFC from './components/DecoratedSFC';
-import logo from './logo.svg';
+import DecoratedUnionProps from './components/DecoratedUnionProps';
+
 
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Button variant="outlined">Hello World!!</Button>
-        <DecoratedSFC text={'この部分がDecoratedSFCです'} color={'secondary'} type={'headline'} />
+        <DecoratedUnionProps category={'book'} author={'this is a book!'} />
+        <DecoratedUnionProps category={'painting'} artist={'I am a big artist!'} />
       </div>
     );
   }
